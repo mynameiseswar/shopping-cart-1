@@ -1,2 +1,24 @@
-<p class="app-title"> Application Name: {{title}}</p>
+<!-- <p class="app-title"> Application Name: {{title}}</p>
+
+<p> Sum of {{x}} + {{y}} = {{x+y}}</p>
+<p> sub of {{x}} + {{y}} = {{x-y}}</p>
+<p> Multi of {{x}} + {{y}} = {{x*y}}</p>
+<p> Div of {{x}} + {{y}} = {{x%y}}</p> -->
+
+<!-- <button class="app-button" (click)="showBox()">Show</button>
+<button class="app-button" (click)="hideBox()">Hide</button>
+<button class="app-button" (click)="toggleBox()">Toggle</button> -->
+<!-- @if(boxVisibalityStatus){
+<section class="box"></section>
+}@else {
+    <p> Box status: {{boxVisibalityStatus}}</p>
+} -->
+
+@if(boxVisibalityStatus == 1){
+<section class="box"></section>
+}@else if(boxVisibalityStatus == 2) {
+<p>Box status: {{ boxVisibalityStatus }}</p>
+}@else {
+    <p>Box is not visiable.</p>
+}
 
