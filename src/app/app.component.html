@@ -1,24 +1,47 @@
-<!-- <p class="app-title"> Application Name: {{title}}</p>
+<!-- <button class="app-button" (click)="showBoxType('red')"> Red</button>
+<button class="app-button" (click)="showBoxType('green')"> Green</button>
+<button class="app-button" (click)="showBoxType('blue')"> Blue</button>
+<button class="app-button" (click)="showBoxType('default')"> Default </button>
 
-<p> Sum of {{x}} + {{y}} = {{x+y}}</p>
-<p> sub of {{x}} + {{y}} = {{x-y}}</p>
-<p> Multi of {{x}} + {{y}} = {{x*y}}</p>
-<p> Div of {{x}} + {{y}} = {{x%y}}</p> -->
 
-<!-- <button class="app-button" (click)="showBox()">Show</button>
-<button class="app-button" (click)="hideBox()">Hide</button>
-<button class="app-button" (click)="toggleBox()">Toggle</button> -->
-<!-- @if(boxVisibalityStatus){
-<section class="box"></section>
-}@else {
-    <p> Box status: {{boxVisibalityStatus}}</p>
+@switch (showBox) {
+    @case ('red') {
+        <section class="box red"></section>
+    }
+    @case ('green'){
+        <section class="box green"></section>
+    }
+    @case ('blue'){
+        <section class="box blue"></section>
+    }
+    @default {
+        <section class="box default"></section>
+    }
 } -->
 
-@if(boxVisibalityStatus == 1){
-<section class="box"></section>
-}@else if(boxVisibalityStatus == 2) {
-<p>Box status: {{ boxVisibalityStatus }}</p>
-}@else {
-    <p>Box is not visiable.</p>
-}
+<!-- @for(item of student; track item; let i = $index){
+    <p> {{i}} {{item}}</p>
+}@empty {
+    <p>  No recoard found.</p>
+} -->
 
+<!-- @for(eachHotel of hotelList; track eachHotel){
+     @if(eachHotel.isOpen){
+<section>
+    <img src="../assets/app-images/logo-mg.png" height="100px" alt="hotel-image"/>
+  <p> Id:{{ eachHotel.id }}</p>
+  <p> Name: {{ eachHotel.hotelName }}</p>
+  <p class="h-address"> Address: {{ eachHotel.address | lowercase  }}</p>
+  <p>------------------------------</p>
+</section>
+} }@empty {
+<p>No Hotels Are found.</p>
+} -->
+
+
+<!-- Angular Pipes-->
+
+<!-- Currency Pipe-->
+
+
+<p>Total Amount Is: {{totalAmount | currency: 'symbol': '0.1-4'}}</p>

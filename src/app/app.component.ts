@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -13,42 +14,52 @@ export interface IStudent{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'shopping-cart';
 
-  x = 10;
-  y = 20;
+  showBox = 'green';
+  student = [10,'Raju','Hyd','+91-232345432', null, undefined,[10,20,30,40],{sName: 'Raju'}];
 
-  //boxVisibalityStatus = false;
-  // 0 - false
-  // 1 - true
+  hotelList =[
+    {
+      hotelName: 'ABC',
+      address: 'hyd',
+      isOpen: true,
+      id: 1001
+    },
+    {
+      hotelName: 'XYZ',
+      address: 'hyd',
+      isOpen: false,
+      id: 1002
+    },
+    {
+      hotelName: 'MNO',
+      address: 'hyd',
+      isOpen: true,
+      id: 1003
+    },
+    {
+      hotelName: 'KFC',
+      address: 'hyd',
+      isOpen: false,
+      id: 1004
+    }
+  ];
+ 
+  constructor(){}
 
-  boxVisibalityStatus = 0;
-  // 0 - Hide Box
-  // 1 - Show Box
-  // 2 - Show the Message
-  constructor(){
+
+  showBoxType(boxType: string){
+    this.showBox = boxType;
   }
 
+ 
 
-
-  // showBox(){
-  //   console.log('Show Box');
-  //   this.boxVisibalityStatus = true;
-  // }
-
-  // hideBox(){
-  //   console.log('Hide Box');
-  //   this.boxVisibalityStatus = false;
-  // }
-
-  // toggleBox(){
-  //   this.boxVisibalityStatus = !this.boxVisibalityStatus;
-  // }
+  totalAmount = 100;
   
 
   
