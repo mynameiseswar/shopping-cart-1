@@ -44,4 +44,25 @@
 <!-- Currency Pipe-->
 
 
-<p>Total Amount Is: {{totalAmount | currency: 'symbol': '0.1-4'}}</p>
+<!-- <p>Total Amount Is: {{totalAmount | currency: 'USD' : 'symbol' : '4.2-4' }}</p>
+<p>Total Amount Is: {{totalAmount | percent: '2.2-4'}}</p>
+
+
+
+<p style="margin-left: 100px;"> {{todayDate | date}}</p>
+<p style="margin-left: 100px;"> {{todayDate | date: 'medium'}}</p>
+<p style="margin-left: 100px;"> {{todayDate | date: 'shortTime'}}</p>
+<p style="margin-left: 100px;"> {{todayDate | date:'MM dd yyyy  hh:mm:s a'}}</p> -->
+
+
+
+@for(emp of employeList; track emp){
+    <!-- <p style="margin-left: 10px;">{{emp.firstName}} {{emp.lastName}}</p> -->
+    <p style="margin-left: 10px;">{{emp | fullName}} - {{emp.salary | salary: '2'   }}</p>
+}@empty {
+    <p> No Recoards.</p>
+}
+
+<button (click)="showMeBox()"> Show Me </button>
+
+{{boxStatus}}

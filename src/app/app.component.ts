@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FullNamePipe } from './utils/pipe/full-name.pipe';
+import { SalaryPipe } from './utils/pipe/salary.pipe';
 
 export interface IStudent{
   name: string,
@@ -14,53 +16,65 @@ export interface IStudent{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FullNamePipe, SalaryPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-  showBox = 'green';
-  student = [10,'Raju','Hyd','+91-232345432', null, undefined,[10,20,30,40],{sName: 'Raju'}];
+  
 
-  hotelList =[
+
+  employeList = [
+
     {
-      hotelName: 'ABC',
-      address: 'hyd',
-      isOpen: true,
-      id: 1001
+      firstName: 'Raju',
+      lastName: 'K',
+      salary: 200,
     },
     {
-      hotelName: 'XYZ',
-      address: 'hyd',
-      isOpen: false,
-      id: 1002
+      firstName: 'Siva',
+      lastName: 'K',
+      salary: 140,
     },
     {
-      hotelName: 'MNO',
-      address: 'hyd',
-      isOpen: true,
-      id: 1003
+      firstName: 'Venkat',
+      lastName: 'B',
+      salary: 1000,
     },
     {
-      hotelName: 'KFC',
-      address: 'hyd',
-      isOpen: false,
-      id: 1004
-    }
-  ];
+      firstName: 'Bhanu',
+      lastName: 'P',
+      salary: 300,
+    },
+    {
+      firstName: 'Manu',
+      lastName: 'A',
+      salary: 100,
+    },
+    {
+      firstName: 'Prasad',
+      lastName: 'T',
+      salary: 100,
+    },
+  ]
+
  
   constructor(){}
 
 
-  showBoxType(boxType: string){
-    this.showBox = boxType;
-  }
-
  
 
-  totalAmount = 100;
-  
+  // totalAmount = 1.1234567;
 
+  // todayDate = new Date();
+
+
+  boxStatus = false;
+
+
+  showMeBox(){
+    this.boxStatus = !this.boxStatus;
+  }
   
 }
