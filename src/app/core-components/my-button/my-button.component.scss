@@ -1,0 +1,29 @@
+.app-button{
+    padding: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+.app-button:hover{
+    background-color: rgb(43, 172, 43);
+}
+
+.app-blue{
+    background-color: blue;
+}
+.app-red{
+    background-color: red;
+}
+
+.app-cyan{
+    background-color: cyan;
+}
+
+.app-cyan:hover{
+    background-color: rgb(5, 100, 100);
+}

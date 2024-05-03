@@ -1,68 +1,22 @@
-<!-- <button class="app-button" (click)="showBoxType('red')"> Red</button>
-<button class="app-button" (click)="showBoxType('green')"> Green</button>
-<button class="app-button" (click)="showBoxType('blue')"> Blue</button>
-<button class="app-button" (click)="showBoxType('default')"> Default </button>
-
-
-@switch (showBox) {
-    @case ('red') {
-        <section class="box red"></section>
-    }
-    @case ('green'){
-        <section class="box green"></section>
-    }
-    @case ('blue'){
-        <section class="box blue"></section>
-    }
-    @default {
-        <section class="box default"></section>
-    }
-} -->
-
-<!-- @for(item of student; track item; let i = $index){
-    <p> {{i}} {{item}}</p>
-}@empty {
-    <p>  No recoard found.</p>
-} -->
-
-<!-- @for(eachHotel of hotelList; track eachHotel){
-     @if(eachHotel.isOpen){
-<section>
-    <img src="../assets/app-images/logo-mg.png" height="100px" alt="hotel-image"/>
-  <p> Id:{{ eachHotel.id }}</p>
-  <p> Name: {{ eachHotel.hotelName }}</p>
-  <p class="h-address"> Address: {{ eachHotel.address | lowercase  }}</p>
-  <p>------------------------------</p>
-</section>
-} }@empty {
-<p>No Hotels Are found.</p>
-} -->
-
-
-<!-- Angular Pipes-->
-
-<!-- Currency Pipe-->
-
-
-<!-- <p>Total Amount Is: {{totalAmount | currency: 'USD' : 'symbol' : '4.2-4' }}</p>
-<p>Total Amount Is: {{totalAmount | percent: '2.2-4'}}</p>
 
 
 
-<p style="margin-left: 100px;"> {{todayDate | date}}</p>
-<p style="margin-left: 100px;"> {{todayDate | date: 'medium'}}</p>
-<p style="margin-left: 100px;"> {{todayDate | date: 'shortTime'}}</p>
-<p style="margin-left: 100px;"> {{todayDate | date:'MM dd yyyy  hh:mm:s a'}}</p> -->
+
+<app-my-button [type]="'edit'" [title]="'Edit'" [className]="'app-blue'" (buttonClicked)="appButtonClicked($event)"></app-my-button>
+<app-my-button [type]="'delete'" [title]="'Delete'" [className]="'app-red'" (buttonClicked)="appButtonClicked($event)"></app-my-button>
+<app-my-button [type]="'open'" [title]="'Open'" [className]="'app-cyan'" (buttonClicked)="appButtonClicked($event)"></app-my-button>
 
 
 
-@for(emp of employeList; track emp){
-    <!-- <p style="margin-left: 10px;">{{emp.firstName}} {{emp.lastName}}</p> -->
-    <p style="margin-left: 10px;">{{emp | fullName}} - {{emp.salary | salary: '2'   }}</p>
-}@empty {
-    <p> No Recoards.</p>
-}
 
-<button (click)="showMeBox()"> Show Me </button>
+<!-- <button class="app-button"> 
+    Click Me
+</button>
 
-{{boxStatus}}
+<button class="app-button"> 
+    Click Me
+</button>
+
+<button class="app-button"> 
+    Click Me
+</button> -->

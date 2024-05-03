@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FullNamePipe } from './utils/pipe/full-name.pipe';
 import { SalaryPipe } from './utils/pipe/salary.pipe';
+import { MyButtonComponent } from './core-components/my-button/my-button.component';
 
 export interface IStudent{
   name: string,
@@ -16,7 +17,7 @@ export interface IStudent{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FullNamePipe, SalaryPipe],
+  imports: [RouterOutlet, CommonModule, FullNamePipe, SalaryPipe, MyButtonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -77,4 +78,10 @@ export class AppComponent {
     this.boxStatus = !this.boxStatus;
   }
   
+
+  appButtonClicked(e: string){
+    //console.log("App Button Got Clicked.................");
+
+    console.log(e)
+  }
 }
