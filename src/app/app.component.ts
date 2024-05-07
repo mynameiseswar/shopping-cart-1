@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { FullNamePipe } from './utils/pipe/full-name.pipe';
 import { SalaryPipe } from './utils/pipe/salary.pipe';
 import { MyButtonComponent } from './core-components/my-button/my-button.component';
+import { AppHeaderComponent } from './core-components/app-header/app-header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export interface IStudent{
   name: string,
@@ -17,71 +19,19 @@ export interface IStudent{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FullNamePipe, SalaryPipe, MyButtonComponent],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    FullNamePipe,
+    SalaryPipe,
+    MyButtonComponent,
+    AppHeaderComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-  
-
-
-  employeList = [
-
-    {
-      firstName: 'Raju',
-      lastName: 'K',
-      salary: 200,
-    },
-    {
-      firstName: 'Siva',
-      lastName: 'K',
-      salary: 140,
-    },
-    {
-      firstName: 'Venkat',
-      lastName: 'B',
-      salary: 1000,
-    },
-    {
-      firstName: 'Bhanu',
-      lastName: 'P',
-      salary: 300,
-    },
-    {
-      firstName: 'Manu',
-      lastName: 'A',
-      salary: 100,
-    },
-    {
-      firstName: 'Prasad',
-      lastName: 'T',
-      salary: 100,
-    },
-  ]
-
- 
   constructor(){}
 
-
- 
-
-  // totalAmount = 1.1234567;
-
-  // todayDate = new Date();
-
-
-  boxStatus = false;
-
-
-  showMeBox(){
-    this.boxStatus = !this.boxStatus;
-  }
-  
-
-  appButtonClicked(e: string){
-    //console.log("App Button Got Clicked.................");
-
-    console.log(e)
-  }
 }

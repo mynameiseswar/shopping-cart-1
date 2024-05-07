@@ -14,7 +14,6 @@ export class MyButtonComponent {
 
 
   @Input('title') buttonTitle: string = 'Click Me';
-
   @Input('className') className: string ='';
   @Input() type!: string;
 

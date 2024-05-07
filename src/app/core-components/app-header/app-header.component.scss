@@ -1,0 +1,37 @@
+
+$brandGray: #E5E5E5;
+$drakGray: #CCCCCC;
+
+$barndPrimary: #fa21d3;
+$brandSecoundary: #025fad;
+$brandTertiary: #4341ae;
+
+
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border: 1px solid $brandGray;
+  box-shadow: 2px 2px 2px  $brandGray;
+}
+
+
+.logo-continaer{
+  margin-left: 10px;
+}
+.global-search-container{
+  input[type=text]{
+    width: 400px;
+    height: 40px;
+    border:1px solid  $brandSecoundary;
+    color: $barndPrimary;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none;
+  }
+}
+.menu-contianer{}
