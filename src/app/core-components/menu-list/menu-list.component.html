@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    @for(list of menuList; track list.id){
+    <li (click)="menuClick(list)">
+      <span class="material-icons">{{list.icon}}</span>
+       <h1>{{list.displayName}}</h1>
+      </li>
+    }
+  </ul>
+</nav>

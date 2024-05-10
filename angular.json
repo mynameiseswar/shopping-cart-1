@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "material-icons/iconfont/material-icons.css",
               "src/styles.scss"
             ],
             "scripts": []

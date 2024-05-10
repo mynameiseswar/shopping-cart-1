@@ -1,36 +1,26 @@
+$brandGray: #E5E5E5;
+$drakGray: #CCCCCC;
+$barndPrimary: #fa21d3;
+$brandSecoundary: #025fad;
+$brandTertiary: #4341ae;
+$brand-white: #FFFFFF;
 
-.app-title{
-    font-size: 20px;
-    color: red;
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 82px);
+  background: rgb(2, 95, 173);
+  background: linear-gradient(234deg, rgba(2, 95, 173, 1) 35%, rgba(67, 65, 174, 0.5858718487394958) 100%);
 }
 
-
-.box{
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    margin: 10px;
-    border-radius: 5px;
+.left-container{
+  width: 250px;
+  height: inherit;
+  border-right: 1px solid $brand-white;
+  background-color: #025fad5c;
 }
 
-.red{
-    background-color: #FF0000;
+.right-container{
+  width: calc(100% - 250px);
+  height: inherit;
 }
-.green{
-    background-color: #00FF00;
-}
-.blue{
-    background-color: #0000FF;
-}
-.default{
-    background-color: #000000;
-}
-
-
-
-.body-color{
-  height: 100vh;
-  background: rgb(2,95,173);
-background: linear-gradient(234deg, rgba(2,95,173,1) 35%, rgba(67,65,174,0.5858718487394958) 100%);
-}
-

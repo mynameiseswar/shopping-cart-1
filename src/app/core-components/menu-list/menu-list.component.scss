@@ -1,0 +1,45 @@
+$brandGray: #E5E5E5;
+$drakGray: #CCCCCC;
+$barndPrimary: #fa21d3;
+$brandSecoundary: #025fad;
+$brandTertiary: #4341ae;
+$brand-white: #FFFFFF;
+
+
+
+nav {
+  height: inherit;
+  height: calc(100vh - 82px);
+  ul {
+    li {
+      list-style-type: none;
+      line-height: 50px;
+      text-align: left;
+      padding-left: 10px;
+      font-size: 20px;
+      border-bottom: 1px solid $brandGray;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $brand-white;
+      span{
+        font-size: 30px;
+      }
+      h1{
+        font-size: 20px;
+        font-weight: 400;
+        padding-left: 10px;
+      }
+    }
+    li:hover{
+      background-color: $barndPrimary;
+      color: $brand-white;
+    }
+    li:last-child{
+      border: none;
+    }
+
+  }
+
+}

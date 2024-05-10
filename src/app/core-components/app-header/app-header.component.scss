@@ -1,11 +1,10 @@
+// @import "src/theme.scss";
 
 $brandGray: #E5E5E5;
 $drakGray: #CCCCCC;
-
 $barndPrimary: #fa21d3;
 $brandSecoundary: #025fad;
 $brandTertiary: #4341ae;
-
 
 
 header{
@@ -34,4 +33,24 @@ header{
     outline: none;
   }
 }
-.menu-contianer{}
+.menu-contianer{
+  .menu-items{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    span{
+      color: $brandSecoundary;
+      cursor: pointer;
+      font-size: 30px;
+      margin: 0px 5px;
+      border-radius: 100%;
+      padding: 10px;
+    }
+    span:hover{
+      background-color: #fa21d3;
+      color: #FFF;
+
+
+    }
+  }
+}
