@@ -1,30 +1,27 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './core-components/pages/home/home.component';
-import { AboutUsComponent } from './core-components/pages/about-us/about-us.component';
-import { ProductsComponent } from './core-components/pages/products/products.component';
-import { FeedbackComponent } from './core-components/pages/feedback/feedback.component';
-import { ContactUsComponent } from './core-components/pages/contact-us/contact-us.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo:'/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'about-us',
-    component: AboutUsComponent
-  },
-  {
-    path: 'contact-us',
-    component: ContactUsComponent
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomeModule)
   },
   {
     path: 'products',
-    component: ProductsComponent
+    loadChildren: () => import('./pages/product/product.module').then( m => m.ProductModule)
   },
   {
-    path: 'feedback',
-    component: FeedbackComponent
+    path: 'about-us',
+    loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+  },
+  {
+    path: "**",
+    component: PageNotFoundComponent
   }
 ];

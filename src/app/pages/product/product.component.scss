@@ -1,0 +1,33 @@
+$brandGray: #E5E5E5;
+$drakGray: #CCCCCC;
+$barndPrimary: #fa21d3;
+$brandSecoundary: #025fad;
+$brandTertiary: #4341ae;
+$brand-white: #FFFFFF;
+
+
+.product-container{
+  nav{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $brand-white;
+    .app-tab{
+      color: $brand-white;
+      font-size: 18px;
+      height: inherit;
+      width: 100px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .active{
+      background-color: $brand-white;
+      color: $brandSecoundary;
+      font-weight: 600;
+    }
+  }
+}

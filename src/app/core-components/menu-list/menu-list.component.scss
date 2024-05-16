@@ -5,7 +5,9 @@ $brandSecoundary: #025fad;
 $brandTertiary: #4341ae;
 $brand-white: #FFFFFF;
 
-
+.active{
+  background-color: $barndPrimary;
+}
 
 nav {
   height: inherit;

@@ -1,7 +1,7 @@
 <nav>
   <ul>
     @for(list of menuList; track list.id){
-    <li (click)="menuClick(list)">
+    <li (click)="menuClick(list)" [ngClass]="{'active': list.isActive == true}">
       <span class="material-icons">{{list.icon}}</span>
        <h1>{{list.displayName}}</h1>
       </li>

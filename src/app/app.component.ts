@@ -1,4 +1,3 @@
-import { HomeComponent } from './core-components/pages/home/home.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -17,7 +16,6 @@ export interface IStudent{
   isLeader?: boolean
 }
 
-// const routes: Routes | any =[]
 
 
 @Component({
