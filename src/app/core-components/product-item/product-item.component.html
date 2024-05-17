@@ -1,0 +1,22 @@
+<section class="product-item">
+    <section class="prodcut-image">
+      <figure>
+        <img [src]="prodcutDetails.thumbnail" height="200px" alt="product-image"/>
+      </figure>
+    </section>
+    <section class="product-details">
+      <h1 class="p-title" [title]="prodcutDetails.title"> {{prodcutDetails.title}}</h1>
+      <h3 class="p-description" [title]="prodcutDetails.description"> {{prodcutDetails.description}}</h3>
+      <h3 class="p-price"> Price:  {{prodcutDetails.price | currency}}/{{prodcutDetails.discountPercentage | percent}}</h3>
+      <h3 class="p-rating"> Rating:  {{prodcutDetails.rating}}</h3>
+      <h3 class="p-brand"> Brand: {{prodcutDetails.brand}}</h3>
+      <h3 class="p-category"> Category:  {{prodcutDetails.category}}</h3>
+
+    </section>
+    <section class="prodcut-action">
+      <button class="product-button">
+        <span class="material-icons">shopping_cart</span>
+        <span class="button-title"> Add </span>
+      </button>
+    </section>
+</section>

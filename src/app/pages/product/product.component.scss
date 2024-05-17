@@ -15,6 +15,7 @@ $brand-white: #FFFFFF;
     width: 100%;
     border-bottom: 1px solid $brand-white;
     .app-tab{
+      a{
       color: $brand-white;
       font-size: 18px;
       height: inherit;
@@ -23,11 +24,14 @@ $brand-white: #FFFFFF;
       text-align: center;
       cursor: pointer;
       text-transform: uppercase;
+      display: inline-block;
+      }
+      .active{
+        background-color: $brand-white;
+        color: $brandSecoundary;
+        font-weight: 600;
+      }
     }
-    .active{
-      background-color: $brand-white;
-      color: $brandSecoundary;
-      font-weight: 600;
-    }
+
   }
 }

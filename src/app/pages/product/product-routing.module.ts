@@ -15,7 +15,12 @@ const routes: Routes = [
       },
       {
         path:'tab-one',
-        component: TabOneComponent
+        //component: TabOneComponent
+        loadComponent: () => import('./tab-one/tab-one.component').then(m => m.TabOneComponent)
+      },
+      {
+        path: 'tab-two',
+        loadChildren: () => import('./tab-two/tab-two.module').then(m => m.TabTwoModule)
       }
     ]
   }

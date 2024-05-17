@@ -1,8 +1,17 @@
 <section class="product-container">
   <nav>
-    <section class="app-tab active"> Tab 1</section>
-    <section class="app-tab"> Tab 2</section>
-    <section class="app-tab"> Tab 3</section>
+    @for(tab of tabList; track tab){
+      <section class="app-tab">
+        <a [routerLink]="tab.link" [routerLinkActive]="'active'"> {{tab.title}}</a>
+      </section>
+    }
+
+    <!-- <section class="app-tab">
+      <a [routerLink]="'/products/tab-two'" [routerLinkActive]="'active'"> Tab 2</a>
+    </section>
+    <section class="app-tab">
+      <a [routerLink]="'/product/tab-one'" [routerLinkActive]="'active'"> Tab 3</a>
+    </section> -->
   </nav>
   <section>
     <router-outlet></router-outlet>

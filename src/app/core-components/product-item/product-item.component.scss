@@ -1,0 +1,83 @@
+$brandGray: #E5E5E5;
+$drakGray: #CCCCCC;
+$barndPrimary: #fa21d3;
+$brandSecoundary: #025fad;
+$brandTertiary: #4341ae;
+$brand-white: #FFFFFF;
+.product-item{
+  margin: 20px;
+  border: 2px solid $brand-white;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: $brand-white;
+}
+
+.prodcut-image{
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-details{
+  padding: 20px;
+  .p-title{
+    font-size: 24px;
+    color: $brandSecoundary;
+    line-height: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .p-description{
+    font-size: 16px;
+    color: $brandTertiary;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .p-price{
+    font-size: 24px;
+    color: $barndPrimary;
+    line-height: 30px;
+  }
+  .p-rating{
+    font-size: 16px;
+    color: $brandSecoundary;
+    line-height: 30px;
+  }
+  .p-brand{
+    font-size: 16px;
+    color: $brandSecoundary;
+    line-height: 30px;
+  }
+  .p-category{
+    font-size: 16px;
+    color: $brandSecoundary;
+    line-height: 30px;
+  }
+}
+.prodcut-action{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.product-button{
+  padding: 10px;
+  margin: 10px;
+  background-color: $barndPrimary;
+  color: $brand-white;
+  outline:  none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  .button-title{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
