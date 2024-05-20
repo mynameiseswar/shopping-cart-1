@@ -1,0 +1,14 @@
+@import '../../../../theme';
+
+.produt-list-container{
+  height: calc(100vh - 110px);
+  overflow-y: scroll;
+}
+
+.product-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: calc(100% -  0px);
+  overflow-y: auto;
+}

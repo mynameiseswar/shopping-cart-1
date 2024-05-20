@@ -1,9 +1,4 @@
-$brandGray: #E5E5E5;
-$drakGray: #CCCCCC;
-$barndPrimary: #fa21d3;
-$brandSecoundary: #025fad;
-$brandTertiary: #4341ae;
-$brand-white: #FFFFFF;
+ @import '../theme';
 
 .main-container {
   display: flex;
@@ -17,7 +12,7 @@ $brand-white: #FFFFFF;
   width: 250px;
   height: inherit;
   border-right: 1px solid $brand-white;
-  background-color: #025fad5c;
+  background-color: $brandSecoundary;
 }
 
 .right-container{

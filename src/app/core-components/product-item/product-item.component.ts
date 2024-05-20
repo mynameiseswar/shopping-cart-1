@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface ProductInfo {
   "id": number;
@@ -27,7 +28,13 @@ export interface ProductInfo {
 export class ProductItemComponent {
   @Input() prodcutDetails!: ProductInfo;
 
-  constructor() {
+  constructor(
+    private router: Router
+  ) {
 
+  }
+
+  onProductDetails(){
+    this.router.navigate(['/about-us/product-details']);
   }
 }

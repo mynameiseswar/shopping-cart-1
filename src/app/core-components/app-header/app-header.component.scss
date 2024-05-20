@@ -1,11 +1,5 @@
-// @import "src/theme.scss";
 
-$brandGray: #E5E5E5;
-$drakGray: #CCCCCC;
-$barndPrimary: #fa21d3;
-$brandSecoundary: #025fad;
-$brandTertiary: #4341ae;
-
+@import '../../../theme';
 
 header{
   display: flex;
@@ -47,8 +41,8 @@ header{
       padding: 10px;
     }
     span:hover{
-      background-color: #fa21d3;
-      color: #FFF;
+      background-color: $barndPrimary;
+      color: $brand-white;
 
 
     }
