@@ -1,0 +1,32 @@
+
+@import '../../../../theme';
+
+.product-details-contianer{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-title{
+  font-size: 24px;
+  color: $brand-white;
+  font-weight: 600;
+}
+
+.product-information{
+  h1, h3{
+    color: $brand-white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    span{
+      text-transform: uppercase;
+    }
+  }
+}
+
+.prodcut-image-list{
+  display: flex;
+  flex-direction: row;
+}

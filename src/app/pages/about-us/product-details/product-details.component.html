@@ -1,4 +1,34 @@
-<p>product-details works!</p>
+<section class="product-details-contianer">
 
+@if(prodcutDetails){
+  <section class="product-information-container">
+    <p class="page-title"> Product Details</p>
+    <hr/>
+    <section class="product-information">
+      <!-- <h1 > Prodcut Id: {{prodcutDetails.id}}</h1>
+      <h1 class="p-title" [title]="prodcutDetails.title"> Name: {{prodcutDetails.title}}</h1>
+      <h3 class="p-description" [title]="prodcutDetails.description"> Description: {{prodcutDetails.description}}</h3>
+      <h3 class="p-price"> Price:  {{prodcutDetails.price | currency}}/{{prodcutDetails.discountPercentage | percent}}</h3>
+      <h3 class="p-rating"> Rating:  {{prodcutDetails.rating}}</h3>
+      <h3 class="p-brand"> Brand: {{prodcutDetails.brand}}</h3>
+      <h3 class="p-category"> Category:  {{prodcutDetails.category}}</h3> -->
+      @for(key of productKeys; track key){
+        @if(key !== 'images' && key !== 'thumbnail'){
+          <h1> <span> {{key}} : {{prodcutDetails[key]}} </span></h1>
+        }
+      }
 
-<a [routerLink]="['/about-us/product-list']"> List</a>
+    </section>
+  </section>
+  <section class="product-image-container">
+    <section class="prodcut-image-list">
+      @for(image of prodcutDetails['images']; track image ){
+        <figure>
+          <img [src] ="image" width="200px" alt="product-image"/>
+        </figure>
+      }
+    </section>
+  </section>
+}
+
+</section>

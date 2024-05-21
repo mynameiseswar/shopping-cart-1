@@ -35,6 +35,7 @@ export class ProductItemComponent {
   }
 
   onProductDetails(){
-    this.router.navigate(['/about-us/product-details']);
+   // console.log(this.prodcutDetails)
+   this.router.navigate(['/about-us/product-details', this.prodcutDetails.id]);
   }
 }

@@ -18,7 +18,7 @@ const routes: Routes = [
         loadComponent: () => import('./product-list/product-list.component').then( c => c.ProductListComponent)
       },
       {
-        path: 'product-details',
+        path: 'product-details/:prodcutId',
         loadComponent: () => import('./product-details/product-details.component').then( c => c.ProductDetailsComponent)
       }
     ]
