@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProductInfo, ProductItemComponent } from '../../../core-components/product-item/product-item.component';
@@ -15,8 +15,7 @@ export interface ProductList {
   imports: [
     CommonModule,
     ProductItemComponent,
-    RouterModule,
-    HttpClientModule
+    RouterModule
   ],
   providers: [],
   templateUrl: './product-list.component.html',
@@ -28,10 +27,9 @@ export class ProductListComponent {
   productList = [];
 
   constructor(
-    private httpClient: HttpClient,
     private productService: ProductService
   ) {
-    this.httpClient.get('https://dummyjson.com/products').subscribe(
+    this.productService.getProductList().subscribe(
       (listOfProducts: ProductList | any) => {
         if (listOfProducts && listOfProducts.hasOwnProperty('products')) {
           this.productList = listOfProducts.products;
