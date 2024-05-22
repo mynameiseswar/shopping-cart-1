@@ -1,3 +1,4 @@
+import { ProductService } from './../../pages/about-us/product.service';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
@@ -29,13 +30,15 @@ export class ProductItemComponent {
   @Input() prodcutDetails!: ProductInfo;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private productService: ProductService
   ) {
 
   }
 
   onProductDetails(){
-   // console.log(this.prodcutDetails)
+   // console.log(this.prodcutDetails);
+   this.productService.setSelectedProductInformation(this.prodcutDetails);
    this.router.navigate(['/about-us/product-details', this.prodcutDetails.id]);
   }
 }
