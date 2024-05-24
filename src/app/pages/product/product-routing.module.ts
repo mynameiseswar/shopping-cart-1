@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product.component';
-import { TabOneComponent } from './tab-one/tab-one.component';
 
 const routes: Routes = [
   {

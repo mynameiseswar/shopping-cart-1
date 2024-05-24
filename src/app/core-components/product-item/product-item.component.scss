@@ -1,11 +1,11 @@
 @import '../../../theme';
 .product-item{
   margin: 20px;
-  border: 2px solid $brand-white;
+  border: 2px solid $brandWhite;
   width: 300px;
   overflow: hidden;
   border-radius: 10px;
-  background-color: $brand-white;
+  background-color: $brandWhite;
 }
 
 .prodcut-image{
@@ -64,7 +64,7 @@
   padding: 10px;
   margin: 10px;
   background-color: $barndPrimary;
-  color: $brand-white;
+  color: $brandWhite;
   outline:  none;
   border: none;
   border-radius: 10px;

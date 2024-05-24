@@ -1,19 +1,19 @@
 <section class="product-container">
-  <nav>
-    @for(tab of tabList; track tab){
-      <section class="app-tab">
-        <a [routerLink]="tab.link" [routerLinkActive]="'active'"> {{tab.title}}</a>
-      </section>
-    }
 
-    <!-- <section class="app-tab">
-      <a [routerLink]="'/products/tab-two'" [routerLinkActive]="'active'"> Tab 2</a>
-    </section>
-    <section class="app-tab">
-      <a [routerLink]="'/product/tab-one'" [routerLinkActive]="'active'"> Tab 3</a>
-    </section> -->
-  </nav>
-  <section>
-    <router-outlet></router-outlet>
-  </section>
+  <form class="data-binding-example">
+    <label> Enter First Numebr </label>
+    <input type="text" name="firstNumber" placeholder="Enter Number" [(ngModel)]="x" (ngModelChange)="handelFirstNumebrChagne($event)" />
+    <label> Enter Secound Numebr </label>
+    <input type="text" name="secoundNumber" placeholder="Enter Number" [(ngModel)]="y" (ngModelChange)="handelSecoundNumebrChagne($event)" />
+    <label> User Type</label>
+    <input type='radio' name="userType"/> <span> Student </span>
+    <input type='radio' name="userType"/> <span>  Teacher </span>
+    <label> Chose Option</label>
+    <select name="operationType" [(ngModel)]="operationType" (ngModelChange)="handelOpertioTypeChange($event)">
+      <option value="sum"> Sum</option>
+      <option value="sub"> Sub</option>
+      <option value="multi"> Multi</option>
+      <option value="div"> Div</option>
+    </select>
+  </form>
 </section>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ProductInfo } from '../../core-components/product-item/product-item.component';
+import { HtpClientService } from '../../htp-client.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class ProductService {
   private selectedProdut = {};
 
   constructor(
-    private httpClient: HttpClient
+    private htpClientService: HtpClientService
   ) { }
 
   setSelectedProductInformation(product: ProductInfo | any) {
@@ -22,10 +23,10 @@ export class ProductService {
     return this.selectedProdut;
   }
   getProductList(){
-    return this.httpClient.get('https://dummyjson.com/products');
+    return this.htpClientService.getCall('https://dummyjson.com/products');
   }
 
   getProductDetails(productId: number) {
-    return this.httpClient.get(`https://dummyjson.com/products/${productId}`);
+    return this.htpClientService.getCall(`https://dummyjson.com/products/${productId}`);
   }
 }

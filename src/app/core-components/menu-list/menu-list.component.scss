@@ -19,7 +19,7 @@ nav {
       display: flex;
       flex-direction: row;
       align-items: center;
-      color: $brand-white;
+      color: $brandWhite;
       span{
         font-size: 30px;
       }
@@ -31,7 +31,7 @@ nav {
     }
     li:hover{
       background-color: $barndPrimary;
-      color: $brand-white;
+      color: $brandWhite;
     }
     li:last-child{
       border: none;

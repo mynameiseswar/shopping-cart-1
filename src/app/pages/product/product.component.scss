@@ -1,32 +1,31 @@
 @import '../../../theme';
 
-
 .product-container{
-  nav{
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid $brand-white;
-    .app-tab{
-      a{
-      color: $brand-white;
-      font-size: 18px;
-      height: inherit;
-      width: 100px;
-      line-height: 50px;
-      text-align: center;
-      cursor: pointer;
-      text-transform: uppercase;
-      display: inline-block;
-      }
-      .active{
-        background-color: $brand-white;
-        color: $brandSecoundary;
-        font-weight: 600;
-      }
-    }
+  padding: 30px;
+  height: calc(100vh - 100px);
+}
+.data-binding-example{
+  border: 2px solid $brandWhite;
+  width: 300px;
+  border-radius: 10px;
+
+  padding: 20px;
+  label, span{
+    color: $brandWhite;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  input, select{
+    outline: none;
+    height: 30px;
+    border: 1px solid $brandWhite;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: $barndPrimary;
 
   }
 }
