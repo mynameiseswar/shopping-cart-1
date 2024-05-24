@@ -1,23 +1,47 @@
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   standalone: true,
   imports: [
+    CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
 export class ProductComponent {
 
-  x: number | null = null;
-  y: number | null = null;
+  x: number | null | undefined = null;
+  y: number | null | undefined = null;
+  operationType: string | null | undefined = 'sub';
 
-  operationType: string = 'sub';
+  mathForm = new FormGroup({
+    x: new FormControl(null,[Validators.required]),
+    y: new FormControl(null, [Validators.required]),
+    operationType: new FormControl('sum',[])
+  });
+
+
+
+  result = 0;
+
+  handelSubmit(){
+    if(this.mathForm.valid){
+    this.x = this.mathForm.value.x;
+    this.y = this.mathForm.value.y;
+    this.operationType = this.mathForm.value.operationType;
+    this.doOperation();
+    }else{
+      console.log('From is Invalid')
+    }
+  }
+
 
   handelFirstNumebrChagne(e: any) {
     this.x = e;
@@ -30,32 +54,25 @@ export class ProductComponent {
   }
 
   doOperation() {
-    if (this.x && this.y && !isNaN(this.x) && !isNaN(this.y)) {
-      let result = 0;
+    if (this.x && this.y && !isNaN(this.x) && !isNaN(this.y) && this.operationType) {
+
       switch (this.operationType.trim().toLowerCase()) {
         case 'sum':
-          result = Number(this.x) + Number(this.y)
+          this.result = Number(this.x) + Number(this.y)
           break;
         case 'sub':
-          result = this.x - this.y
+         this.result = this.x - this.y
           break;
         case 'multi':
-          result = this.x * this.y
+          this.result = this.x * this.y
           break;
         case 'div':
-          result = this.x / this.y
+          this.result = this.x / this.y
           break;
       }
-      console.log(result)
+
     }
   }
-
-  findSum() {
-    if (this.x && this.y && !isNaN(this.x) && !isNaN(this.y)) {
-      console.log(Number(this.x) + Number(this.y))
-    }
-  }
-
   handelOpertioTypeChange(e: any) {
     this.operationType = e;
     this.doOperation();

@@ -1,4 +1,4 @@
-<section class="product-container">
+<!-- <section class="product-container">
 
   <form class="data-binding-example">
     <label> Enter First Numebr </label>
@@ -16,4 +16,25 @@
       <option value="div"> Div</option>
     </select>
   </form>
+  <h5> Resut: {{result}}</h5>
+</section> -->
+<section class="product-container">
+  <form [formGroup]="mathForm" class="data-binding-example" (ngSubmit)="handelSubmit()">
+    <label> Enter First Numebr <sup class="required-filed">*</sup> </label>
+    <input type="text" name="firstNumber" placeholder="Enter Number" formControlName="x" />
+    <label> Enter Secound Numebr <sup class="required-filed">*</sup></label>
+    <input type="text" name="secoundNumber" placeholder="Enter Number" formControlName="y" />
+    <!-- <label> User Type</label>
+  <input type='radio' name="userType"/> <span> Student </span>
+  <input type='radio' name="userType"/> <span>  Teacher </span> -->
+    <label> Chose Option</label>
+    <select name="operationType" formControlName="operationType">
+      <option value="sum"> Sum</option>
+      <option value="sub"> Sub</option>
+      <option value="multi"> Multi</option>
+      <option value="div"> Div</option>
+    </select>
+    <button class="submit" [ngClass]="{'disabled': !mathForm.valid}" [disabled]="!mathForm.valid" type="submit"> Submit</button>
+  </form>
+  <h1 class="result"> Hello Resut: {{result}}</h1>
 </section>

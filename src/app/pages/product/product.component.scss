@@ -29,3 +29,33 @@
 
   }
 }
+
+.submit{
+  margin: 10px;
+  outline: none;
+  background-color: $barndPrimary;
+  color: $brandWhite;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.disabled{
+  background-color: $brandGray;
+  color: #000;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result{
+  background-color: $barndPrimary;
+  color: $brandWhite;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+.required-filed{
+  color: $barndPrimary;
+  font-size: 20px;
+}
