@@ -4,58 +4,64 @@
   padding: 30px;
   height: calc(100vh - 100px);
 }
-.data-binding-example{
-  border: 2px solid $brandWhite;
-  width: 300px;
-  border-radius: 10px;
 
-  padding: 20px;
-  label, span{
-    color: $brandWhite;
-    display: block;
+.form-field{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  label{
     font-size: 20px;
+    color: $brandWhite;
     margin-bottom: 5px;
   }
-  input, select{
-    outline: none;
+  input[type='text'], select, input[type="tel"], input[type='email'],  input[type='date']{
     height: 30px;
     border: 1px solid $brandWhite;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 300px;
-    font-size: 20px;
+    border-radius: 5px;
     padding-left: 10px;
-    color: $barndPrimary;
-
+    outline: none;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+.gender-container{
+  display: flex;
+  flex-direction: row;
+}
+.form-field-radio{
+  display: flex;
+  flex-direction: row;
+  margin: 0px 10px;
+  input[type='radio']{
+    border: 1px solid$barndPrimary;
+    outline: none;
+    font-size: 20px;
+  }
+  span{
+    font-size: 18px;
+    color: $brandWhite;
+    padding-left: 10px;
+    font-weight: 600;
   }
 }
 
-.submit{
-  margin: 10px;
-  outline: none;
-  background-color: $barndPrimary;
-  color: $brandWhite;
-  border: none;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-}
+.from-actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  button{
+    padding: 5px;
+    background-color: $barndPrimary;
+    color: $brandWhite;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid $brandWhite;
+    cursor: pointer;
+    margin: 0px 5px;
+    border-radius: 5px;
 
-.disabled{
-  background-color: $brandGray;
-  color: #000;
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.result{
-  background-color: $barndPrimary;
-  color: $brandWhite;
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
-}
-.required-filed{
-  color: $barndPrimary;
-  font-size: 20px;
+  }
+  .rest{
+    background-color: $brandSecoundary;
+  }
 }

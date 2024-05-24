@@ -17,64 +17,18 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductComponent {
 
-  x: number | null | undefined = null;
-  y: number | null | undefined = null;
-  operationType: string | null | undefined = 'sub';
-
-  mathForm = new FormGroup({
-    x: new FormControl(null,[Validators.required]),
-    y: new FormControl(null, [Validators.required]),
-    operationType: new FormControl('sum',[])
+  userReg = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    email: new FormControl(),
+    dob: new FormControl(),
+    gender: new FormControl(),
+    userType: new FormControl(),
+    mobile: new FormControl(),
   });
 
-
-
-  result = 0;
-
   handelSubmit(){
-    if(this.mathForm.valid){
-    this.x = this.mathForm.value.x;
-    this.y = this.mathForm.value.y;
-    this.operationType = this.mathForm.value.operationType;
-    this.doOperation();
-    }else{
-      console.log('From is Invalid')
-    }
+    console.log(this.userReg.value)
   }
 
-
-  handelFirstNumebrChagne(e: any) {
-    this.x = e;
-    this.doOperation();
-  }
-
-  handelSecoundNumebrChagne(e: any) {
-    this.y = e;
-    this.doOperation()
-  }
-
-  doOperation() {
-    if (this.x && this.y && !isNaN(this.x) && !isNaN(this.y) && this.operationType) {
-
-      switch (this.operationType.trim().toLowerCase()) {
-        case 'sum':
-          this.result = Number(this.x) + Number(this.y)
-          break;
-        case 'sub':
-         this.result = this.x - this.y
-          break;
-        case 'multi':
-          this.result = this.x * this.y
-          break;
-        case 'div':
-          this.result = this.x / this.y
-          break;
-      }
-
-    }
-  }
-  handelOpertioTypeChange(e: any) {
-    this.operationType = e;
-    this.doOperation();
-  }
 }
