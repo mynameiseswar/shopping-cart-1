@@ -21,15 +21,27 @@
 
 <section class="product-container">
 
-
+  <section class="add_student">
   <form [formGroup]="userReg" (ngSubmit)="handelSubmit()">
     <section class="form-field">
-      <label> First Name</label>
+      <label> First Name <sup> *</sup></label>
       <input type="text" placeholder="Enter First Name" formControlName="firstName" />
+        @if((userReg.controls['firstName'].touched || submitted) && userReg.controls['firstName']['errors'] && userReg.controls['firstName']['errors']['required']){
+          <p class="form-errors"> First Name is Required.</p>
+        } @if(userReg.controls['firstName']['errors'] && userReg.controls['firstName']['errors']['minlength']){
+          <p class="form-errors"> First Name is Required Min Length is {{userReg.controls['firstName']['errors']['minlength']['requiredLength']}}.</p>
+        }
+        @if(userReg.controls['firstName']['errors'] && userReg.controls['firstName']['errors']['maxlength']){
+          <p class="form-errors"> First Name is Required Maxn Length is {{userReg.controls['firstName']['errors']['maxlength']['requiredLength']}}.</p>
+        }
+
     </section>
     <section class="form-field">
       <label> Last Name</label>
       <input type="text" placeholder="Enter Last Name" formControlName="lastName" />
+      @if( (userReg.controls['lastName'].touched  || submitted) && userReg.controls['lastName']['errors'] && userReg.controls['lastName']['errors']['required']){
+        <p class="form-errors"> Last Name is Required.</p>
+      }
     </section>
     <section class="form-field">
       <label> Email</label>
@@ -54,7 +66,7 @@
     <section class="form-field">
       <label> User Type</label>
       <select  formControlName="userType">
-        <option value=""> Select</option>
+        <option value="" disabled selected> Select</option>
         <option value="student"> Student</option>
         <option value="teacher"> Teacher</option>
       </select>
@@ -69,4 +81,25 @@
     </section>
 
   </form>
+</section>
+<section class="view_student_list">
+  <table class="student_list">
+    <thead>
+      <th> S.NO</th>
+      <th> Name </th>
+      <th> DOB </th>
+      <th> Email</th>
+      <th> Gender</th>
+      <th> User Type</th>
+    </thead>
+    <tr>
+      <td>1</td>
+      <td>Raju</td>
+      <td> as</td>
+      <td>a </td>
+      <td>d</td>
+      <td>a</td>
+    </tr>
+  </table>
+</section>
 </section>

@@ -3,8 +3,12 @@
 .product-container{
   padding: 30px;
   height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: row;
 }
-
+.add_student{
+  width: 400px;
+}
 .form-field{
   display: flex;
   flex-direction: column;
@@ -44,6 +48,15 @@
     font-weight: 600;
   }
 }
+.form-errors{
+  font-size: 16px;
+  color:  $brandWhite;
+  background-color: $barndPrimary;
+  padding: 5px;
+  line-height: 30px;
+  margin:5px 0px;
+  font-weight: 900;
+}
 
 .from-actions{
   display: flex;
@@ -63,5 +76,36 @@
   }
   .rest{
     background-color: $brandSecoundary;
+  }
+}
+
+.view_student_list{
+  width: calc(100% - 400px);
+}
+
+.student_list{
+  width: 100%;
+  thead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    background-color: $barndPrimary;
+    color: $brandWhite;
+    align-items: center;
+    th{
+      text-align: center;
+    }
+  }
+  tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    color: $brandWhite;
+    align-items: center;
+    td{
+
+    }
   }
 }

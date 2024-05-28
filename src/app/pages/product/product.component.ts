@@ -18,8 +18,8 @@ import { CommonModule } from '@angular/common';
 export class ProductComponent {
 
   userReg = new FormGroup({
-    firstName: new FormControl(),
-    lastName: new FormControl(),
+    firstName: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]),
+    lastName: new FormControl(null, [Validators.required]),
     email: new FormControl(),
     dob: new FormControl(),
     gender: new FormControl(),
@@ -27,7 +27,12 @@ export class ProductComponent {
     mobile: new FormControl(),
   });
 
+  submitted = false;
+
   handelSubmit(){
+
+  this.submitted = true;
+    console.log(this.userReg.valid)
     console.log(this.userReg.value)
   }
 
