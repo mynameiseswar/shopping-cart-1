@@ -4,7 +4,7 @@
   padding: 30px;
   height: calc(100vh - 100px);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .add_student{
   width: 400px;
@@ -95,17 +95,22 @@
     align-items: center;
     th{
       text-align: center;
+      width: 150px;
     }
   }
   tr{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 30px;
+    height: 40px;
     color: $brandWhite;
     align-items: center;
     td{
-
+      text-align: center;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid $brandWhite;
     }
   }
 }

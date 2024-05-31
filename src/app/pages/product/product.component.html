@@ -45,7 +45,7 @@
     </section>
     <section class="form-field">
       <label> Email</label>
-      <input type="email" placeholder="Enter Mobile Number" formControlName="email"/>
+      <input type="email" placeholder="Enter Email" formControlName="email"/>
     </section>
     <section class="form-field">
       <label> Date Of Birth</label>
@@ -75,6 +75,7 @@
       <label> Mobile Number</label>
       <input type="tel" placeholder="Enter Mobile Number" formControlName="mobile"/>
     </section>
+    <input type="hidden" formControlName="index"/>
     <section class="from-actions">
       <button type="reset" class="rest"> Reset </button>
       <button type="submit"> Submit </button>
@@ -91,15 +92,29 @@
       <th> Email</th>
       <th> Gender</th>
       <th> User Type</th>
+      <th> Actions</th>
     </thead>
-    <tr>
+    @for(user of usersList; track user; let i = $index){
+     <tr>
+      <td>{{i +1}}</td>
+      <td>{{user.firstName | uppercase}} {{user.lastName | uppercase}}</td>
+      <td>{{user.dob}}</td>
+      <td>{{user.email}} </td>
+      <td>{{user.gender | uppercase}}</td>
+      <td>{{user.userType | uppercase}}</td>
+      <td>
+        <span class="material-icons-outlined" (click)="handelEditRow(user)">edit</span>
+      </td>
+    </tr>
+  }
+    <!--<tr>
       <td>1</td>
       <td>Raju</td>
       <td> as</td>
       <td>a </td>
       <td>d</td>
       <td>a</td>
-    </tr>
+    </tr> -->
   </table>
 </section>
 </section>

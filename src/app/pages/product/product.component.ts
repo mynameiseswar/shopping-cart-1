@@ -25,15 +25,41 @@ export class ProductComponent {
     gender: new FormControl(),
     userType: new FormControl(),
     mobile: new FormControl(),
+    index: new FormControl(new Date().valueOf())
   });
 
   submitted = false;
+  usersList: any = [];
 
-  handelSubmit(){
+  handelSubmit() {
 
-  this.submitted = true;
-    console.log(this.userReg.valid)
-    console.log(this.userReg.value)
+    this.submitted = true;
+    if (this.userReg.valid) {
+      let findIndex = this.usersList.filter(
+        (e: any) => e.index == this.userReg.value.index
+      );
+      if (findIndex.length == 0) {
+        this.usersList.push(this.userReg.value);
+      }else{
+        this.usersList = this.usersList.map(
+          (e: any) =>{
+            if(e.index == this.userReg.value.index){
+              e = this.userReg.value;
+            }
+            return e;
+          }
+        );
+      }
+      this.userReg.reset();
+      this.userReg.patchValue({
+        index: new Date().valueOf()
+      })
+      this.submitted = false;
+    }
+  }
+
+  handelEditRow(selectedRow: any) {
+    this.userReg.patchValue(selectedRow)
   }
 
 }
