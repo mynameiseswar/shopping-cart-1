@@ -1,0 +1,34 @@
+<section>
+  <form [formGroup]="myForm" (ngSubmit)="handelFormSubmit()">
+    <section class="form-field">
+      <label>Name <sup> *</sup></label>
+      <input type="text" placeholder="Enter  Name" formControlName="name" />
+    </section>
+
+    <button type="button" (click)="handelAddSkill()"> Add Skill</button>
+
+    <section formArrayName="skills">
+      @for(skill of skills.controls; track skill; let i = $index){
+        <section class="form-array" [formGroupName]="i">
+          <section class="form-field">
+            <label> Skill</label>
+            <input type="text" placeholder="Enter Skill" formControlName="skill"/>
+          </section>
+          <section class="form-field">
+            <label> Exp</label>
+            <input type="number" placeholder="Enter Skill" formControlName="exp"/>
+          </section>
+          <section class="delete-skill" (click)="deleteSkill(i)">
+            <label> </label>
+<span class="material-icons">delete_outline</span>
+          </section>
+        </section>
+      }
+
+    </section>
+    <section class="from-actions">
+      <button type="reset" class="rest"> Reset </button>
+      <button type="submit"> Submit </button>
+    </section>
+  </form>
+</section>

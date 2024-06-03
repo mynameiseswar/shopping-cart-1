@@ -1,0 +1,53 @@
+@import '../../../theme';
+.app_contact_us{
+  display: flex;
+
+  justify-content: center;
+}
+
+button{
+  padding: 5px;
+  background-color: $barndPrimary;
+  color: $brandWhite;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid $brandWhite;
+  cursor: pointer;
+  margin: 0px 5px;
+  border-radius: 5px;
+
+}
+.delete-skill{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  color:$barndPrimary;
+  cursor: pointer;
+}
+
+.form-array{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.form-field{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  label{
+    font-size: 20px;
+    color: $brandWhite;
+    margin-bottom: 5px;
+  }
+  input[type='text'], select, input[type="tel"], input[type='email'], input[type="number"] ,  input[type='date']{
+    height: 30px;
+    border: 1px solid $brandWhite;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}

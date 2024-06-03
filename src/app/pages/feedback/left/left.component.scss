@@ -1,0 +1,22 @@
+
+@import '../../../../theme';
+
+.left-contianer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.app-button{
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+  cursor: pointer;
+  text-align: center;
+  color: $barndPrimary;
+  background: $brandWhite;
+  list-style-type: none;
+
+}

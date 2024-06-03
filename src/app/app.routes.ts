@@ -21,6 +21,14 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
   },
   {
+    path: 'contact-us',
+    loadComponent: () => import('./pages/contact-us/contact-us.component').then(m => m.ContactUsComponent)
+  },
+  {
+    path: 'feedback',
+    loadComponent: () => import('./pages/feedback/feedback.component').then(m =>m.FeedbackComponent)
+  },
+  {
     path: "**",
     component: PageNotFoundComponent
   }
