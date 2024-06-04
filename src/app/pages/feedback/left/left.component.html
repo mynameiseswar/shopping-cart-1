@@ -1,7 +1,14 @@
 
+
+<ng-container *ngIf="load">
+  <p> Welcome to Angular Life Cycle Methods.</p>
+</ng-container>
+
+{{load}}
 <ul class="left-contianer">
   @for(item of buttons; track item; let i = $index){
     <li class="app-button" (click)="handelClick(i+1)">  {{i +1}}</li>
   }
+
 
 </ul>

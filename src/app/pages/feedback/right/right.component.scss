@@ -1,5 +1,14 @@
 
 @import '../../../../theme';
+
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: $barndPrimary;
+}
+
+
 .right-contianer{
   display: flex;
   flex-direction: row;

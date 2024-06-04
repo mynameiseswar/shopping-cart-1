@@ -15,4 +15,9 @@ import { FeedbackService } from './feedback.service';
 })
 export class FeedbackComponent {
 
+  inputValue = true;
+
+  reload(){
+    this.inputValue = !this.inputValue;
+  }
 }
