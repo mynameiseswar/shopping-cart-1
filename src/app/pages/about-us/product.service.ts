@@ -23,10 +23,12 @@ export class ProductService {
     return this.selectedProdut;
   }
   getProductList(){
-    return this.htpClientService.getCall('https://dummyjson.com/products');
+    return this.htpClientService.getCall('products');
   }
 
+
+
   getProductDetails(productId: number) {
-    return this.htpClientService.getCall(`https://dummyjson.com/products/${productId}`);
+    return this.htpClientService.getCall(`products/${productId}`);
   }
 }

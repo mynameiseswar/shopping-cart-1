@@ -1,6 +1,6 @@
 import { CanActivateFn } from '@angular/router';
 
 export const authGuard: CanActivateFn = (route, state) => {
-
-  return false;
+  let userInfo = window.sessionStorage.getItem('user');
+  return userInfo == 'true' ? true : false;
 };
